@@ -28,6 +28,7 @@
     "permission": "^1.1.0",
     "role": "^1.1.1",
     "sortablejs": "^1.10.0-rc3",
+    "taskfile": "^0.10.0",
     "tui-editor": "^1.4.5",
     "vue": "2.6.10",
     "vue-count-to": "^1.0.13",
