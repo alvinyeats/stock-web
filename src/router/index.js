@@ -6,10 +6,6 @@ Vue.use(Router)
 /* Layout */
 import Layout from '@/layout'
 
-/* Router Modules */
-import componentsRouter from './modules/components'
-import chartsRouter from './modules/charts'
-
 /**
  * Note: sub-menu only appear when route children.length >= 1
  * Detail see: https://panjiachen.github.io/vue-element-admin-site/guide/essentials/router-and-nav.html
@@ -52,7 +48,7 @@ export const constantRoutes = [
     component: Layout,
     redirect: '/dashboard',
     children: [{
-      path: 'dashboard',
+      path: '/dashboard',
       name: 'Dashboard',
       component: () => import('@/views/dashboard/index'),
       meta: { title: 'Dashboard', icon: 'dashboard' }
@@ -70,7 +66,7 @@ export const constantRoutes = [
     children: [
       {
         path: 'price',
-        component: () => import('@/views/dashboard/index'),
+        component: () => import('@/views/market/index'),
         name: 'MarketPrice',
         meta: {
           title: '价格风险指数',
@@ -79,7 +75,7 @@ export const constantRoutes = [
       },
       {
         path: 'deal',
-        component: () => import('@/views/dashboard/index'),
+        component: () => import('@/views/market/index'),
         name: 'MarketDeal',
         meta: {
           title: '交易量风险指数',
